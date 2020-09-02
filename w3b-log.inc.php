@@ -103,18 +103,15 @@
         }
 
         /**
-         * https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
+         *
          */
         private function interpolate($message, $context) {
-            // build a replacement array with braces around the context keys
             $replace = array();
             foreach ($context as $key => $val) {
-                // check that the value can be cast to string
                 if (!is_array($val) && (!is_object($val) || method_exists($val, '__toString'))) {
                     $replace['{' . $key . '}'] = $val;
                 }
             }
-            // interpolate replacement values into the message and return
             return strtr($message, $replace);
         }
 
