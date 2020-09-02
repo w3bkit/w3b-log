@@ -4,16 +4,16 @@ A simple PHP logger that implements the PSR standard.
 ## Usage
 
 ### Initialize the logger
-'''php
+```php
     require 'Psr/Log/LogLevel.php';
     require 'Psr/Log/LoggerInterface.php';
     require 'Psr/Log/invalidArgumentException.php';
     require 'w3b-log.inc.php';
     $log = new LOG();
-'''
+```
 
 ### Log a message
-'''php
+```php
     $log->debug("message");
     $log->info("message");
     $log->notice("message");
@@ -22,4 +22,4 @@ A simple PHP logger that implements the PSR standard.
     $log->critical("message");
     $log->alert("message");
     $log->emergency("message");
-'''
+```
