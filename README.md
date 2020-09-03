@@ -13,11 +13,11 @@ Make sure the filepaths are correct and are included in this order.
 ```
 
 ### Initialize the logger
-Use the standard filename "w3b.log"...
+Use the standard filename "w3b.log" ...
 ```php
     $log = new LOG();
 ```
-...or use the constructor with a given filename.
+... or use the constructor with a given filename.
 ```php
     $log = new LOG("filename.log");
 ```
